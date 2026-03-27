@@ -119,109 +119,52 @@ main section {
     margin: 0 auto;
 }
 
-.contact-content-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 780px;
-    margin: 0 auto 60px;
-    padding: 20px 12px;
-    width: 100%;
-    gap: 20px;
-}
-
-/* Kontaktformulär styling */
-.contact-form-box {
-    max-width: 620px;
-    margin: 30px auto 60px;
-    padding: 24px;
-    background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-.dark-mode .contact-form-box {
-    border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.contact-description {
-    text-align: center;
-    margin-bottom: 16px;
-    color: var(--text-color);
-}
-
-#myForm {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.öppettider {
     margin: 0;
-}
-
-#myForm label {
-    font-weight: 600;
-}
-
-#myForm input,
-#myForm textarea {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    font-size: 16px;
-    background: var(--bg-color);
-    color: var(--text-color);
-}
-
-.dark-mode #myForm input,
-.dark-mode #myForm textarea {
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-#myForm button {
-    width: 120px;
-    align-self: center;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    background: #3498db;
-    color: #fff;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-#myForm button:hover {
-    background: #2980b9;
-}
-
-footer {
-    background-color: var(--header-bg);
-    color: var(--header-text);
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
+.rubrik-öppettider {
+    padding: 20px;
+    font-size: 3rem;
+    padding-bottom: 20px;
 }
 
+.lista-öppettider li {
+    font-size: 1.2rem;
+    color: #000000;
+    margin: 12px 0;
+    position: relative;
+    padding-left: 25px;
+    list-style: none;
 
-}           
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-    color: var(--text-color);
-}   
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+.lista-öppettider li:nth-child(1) { animation-delay: 0.1s; }
+.lista-öppettider li:nth-child(2) { animation-delay: 0.2s; }
+.lista-öppettider li:nth-child(3) { animation-delay: 0.3s; }
+.lista-öppettider li:nth-child(4) { animation-delay: 0.4s; }
+
+.lista-öppettider li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+.lista-öppettider li:hover {
+    color: rgb(26, 26, 26);
+    transform: translateX(5px);
+    transition: all 0.2s ease;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-
