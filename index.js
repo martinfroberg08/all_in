@@ -12,6 +12,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
         localStorage.setItem('theme', theme);
     });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('open');
+            menuToggle.classList.toggle('open');
+            const expanded = mainNav.classList.contains('open');
+            menuToggle.setAttribute('aria-expanded', expanded.toString());
+        });
+
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (mainNav.classList.contains('open')) {
+                    mainNav.classList.remove('open');
+                    menuToggle.classList.remove('open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
 });
 document.getElementById("myForm").addEventListener("submit", function(event) {
   event.preventDefault(); // stoppar sidan från att laddas om

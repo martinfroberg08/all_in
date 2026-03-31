@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All In Träning medlemskap - flexibla alternativ för alla åldrar, inklusive full tillgång till gym och service.">
     <title>All In Träning - Medlemskap</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,8 +11,14 @@
     <header>
         <div class="header-container">
             <div class="logo">All In</div>
-            
-            <nav>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="main-nav" class="main-nav">
                 <ul>
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="oppettider.html">Öppet tider</a></li>
@@ -42,12 +49,47 @@
     </header>
 
     <main>
-        <section>
+        <section class="membership-hero">
             <h2>Medlemskap</h2>
-            <ul>
-                <li>vuxna 249kr per månad</li>
-                <li>Ungdomar 199kr per månad</li>
-            </ul>
+            <p>Välj det medlemskap som passar din livsstil. Alla paket ger 24/7 adgang, fria konditionspass och tillgång till gymmets utrustning.</p>
+        </section>
+
+        <section class="membership-plans">
+            <article class="plan">
+                <h3>Bas</h3>
+                <p>249 kr/månad</p>
+                <ul>
+                    <li>24/7 gymtillgång</li>
+                    <li>Träningsmaskiner och fria vikter</li>
+                    <li>Inga gruppträningar</li>
+                </ul>
+            </article>
+
+            <article class="plan">
+                <h3>Standard</h3>
+                <p>349 kr/månad</p>
+                <ul>
+                    <li>Allt i Bas +</li>
+                    <li>2 gruppträningar/månad</li>
+                    <li>Värdeskåp och duschkit</li>
+                </ul>
+            </article>
+
+            <article class="plan">
+                <h3>Premium</h3>
+                <p>449 kr/månad</p>
+                <ul>
+                    <li>Allt i Standard +</li>
+                    <li>Personlig träningsplan</li>
+                    <li>Prioriterad support</li>
+                    <li>1 gratis PT-pass per månad</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="membership-cta">
+            <p>Börja träna direkt. Kontakta oss eller kom förbi gymmet för gratis introduktion och nyckelkort.</p>
+            <a class="cta-btn" href="kontakt.html">Kontakta oss</a>
         </section>
     </main>
     <script src="index.js"></script>
