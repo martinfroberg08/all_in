@@ -365,8 +365,10 @@ main section {
 }
 
 .tider-personlig-tränare li:hover {
-    transform: translateX(10px);
-    color: #3498db;
+        transform: translateX(10px);
+        color: #3498db;
+    }
+
 /* Hemma-sida */
 .home-hero {
     max-width: 1100px;
@@ -532,44 +534,99 @@ main section {
     }
 }
 
-/* Kontaktformulär */
-.contact-content-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: min(100%, 900px);
-    margin: 40px auto;
-    padding: 20px;
+/* Gemensam sidlayout */
+body {
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+main {
+    padding-bottom: 40px;
+}
+
+.page-hero {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 28px 24px;
+    background: rgba(52, 73, 94, 0.05);
+    border: 1px solid rgba(44, 62, 80, 0.12);
+    border-radius: 18px;
     text-align: center;
 }
 
-.contact-content-wrap h2,
-.contact-content-wrap a,
-.contact-content-wrap p {
-    color: var(--text-color);
+.page-hero h2,
+.page-hero h1 {
+    font-size: clamp(2rem, 2.5vw, 2.6rem);
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #4a5568;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 28px;
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.contact-info {
+    background: #f7f9fb;
+    border: 1px solid #dfe4ea;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+    text-align: left;
+}
+
+.contact-info h3 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.contact-info p,
+.contact-info a {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
+}
+
+.contact-info a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 .contact-form-box {
     width: 100%;
-    max-width: 600px;
-    background: rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    max-width: none;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.06);
 }
 
 .contact-form-box .contact-description {
-    margin-bottom: 16px;
-    font-size: 1rem;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
 }
 
 .contact-form-box form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 14px;
 }
 
 .contact-form-box label {
@@ -580,16 +637,16 @@ main section {
 .contact-form-box input,
 .contact-form-box textarea {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #cccccc;
-    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d1d9e0;
+    border-radius: 10px;
     font-size: 1rem;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
 .contact-form-box textarea {
-    min-height: 120px;
+    min-height: 140px;
     resize: vertical;
 }
 
@@ -597,7 +654,7 @@ main section {
     margin-top: 8px;
     padding: 12px 18px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #2c3e50;
     color: white;
     font-weight: 700;
@@ -610,9 +667,50 @@ main section {
     transform: translateY(-1px);
 }
 
+.dark-mode .contact-info,
+.dark-mode .contact-form-box,
+.dark-mode .page-hero {
+    background: #1b1b1b;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .contact-info p,
+.dark-mode .contact-info a,
+.dark-mode .contact-form-box .contact-description,
+.dark-mode .page-hero p {
+    color: #e6e6e6;
+}
+
+.dark-mode .contact-info a {
+    color: #8ab4f8;
+}
+
+.dark-mode .contact-form-box input,
+.dark-mode .contact-form-box textarea {
+    background-color: #121212;
+    border-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode .contact-form-box button {
+    background: #2f3c4f;
+}
+
+.dark-mode .contact-form-box button:hover {
+    background-color: #1f2f40;
+}
+
+@media (max-width: 900px) {
+    .contact-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 14px;
+    }
+}
+
 @media (max-width: 768px) {
-    .header-container,
-    .contact-content-wrap {
+    .header-container {
         padding: 0 16px;
         width: 100%;
     }
