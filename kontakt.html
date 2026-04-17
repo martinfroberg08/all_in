@@ -48,33 +48,39 @@
         </div>
     </header>
 
-    <div class="contact-content-wrap">
-      <main>
-          <section>
-              <h2>Kontakt</h2>
-              <a href="tel:070 210 44 08"> 070-210 44 08 </a>
-          </section>
-      </main>
+    <main>
+        <section class="page-hero contact-hero">
+            <h2>Kontakt</h2>
+            <p>Vi svarar snabbt på telefon, e-post eller via formuläret nedan. Välkommen att höra av dig!</p>
+        </section>
 
+        <section class="contact-grid">
+            <article class="contact-info">
+                <h3>Så når du oss</h3>
+                <p><strong>Telefon:</strong> <a href="tel:0702104408">070-210 44 08</a></p>
+                <p><strong>E-post:</strong> <a href="mailto:info@allintrening.se">info@allintrening.se</a></p>
+                <p><strong>Adress:</strong> All In Träning, Ånge</p>
+                <p>Kom gärna förbi gymmet för en kostnadsfri introduktion och nyckelkort.</p>
+            </article>
 
-      <div class="contact-form-box">
-      <p class="contact-description">Du kan också kontakta oss genom att fylla i formuläret nedan:</p>
-      <form id="myForm">
-        <label for="name">Namn:</label>
-        <input type="text" id="name" name="name" required>
+            <div class="contact-form-box">
+                <p class="contact-description">Du kan också kontakta oss genom att fylla i formuläret nedan:</p>
+                <form id="myForm">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" required>
 
-        <label for="email">E-post:</label>
-        <input type="email" id="email" name="email" required>
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required>
 
-        <label for="message">Meddelande:</label>
-        <textarea id="message" name="message" required></textarea>
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">Skicka</button>
-      </form>
-    </div>
-
-  <p id="result"></p>
-</div>
+                    <button type="submit">Skicka</button>
+                </form>
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
 
     <script src="index.js"></script>
 </body>
