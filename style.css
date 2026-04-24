@@ -718,3 +718,14 @@ main {
         margin: 0 auto;
     }
 }
+
+.gym-image {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    margin-top: 0px;
+    z-index: -1;
+    opacity: 1;
+}
