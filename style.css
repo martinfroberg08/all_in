@@ -6,7 +6,6 @@
 
 :root {
     --bg-color: #ffffff;
-    --text-color: #333333;
     --header-bg: #2c3e50;
     --header-text: white;
     --nav-hover: #3498db;
@@ -15,6 +14,9 @@
 .dark-mode {
     --bg-color: #121212;
     --text-color: #ffffff;
+    .lista-öppettider li {
+        color: #ffffff;
+    }
     --header-bg: #1e1e1e;
     --header-text: #ffffff;
     --nav-hover: #61dafb;
@@ -40,9 +42,6 @@ header {
 .header-container {
     border-radius: 0 0 18px 18px;
     overflow: hidden;
-}
-
-.header-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -368,8 +367,7 @@ main section {
         transform: translateX(10px);
         color: #3498db;
     }
-
-/* Hemma-sida */
+ 
 .home-hero {
     max-width: 1100px;
     margin: 30px auto 20px;
@@ -420,8 +418,8 @@ main section {
 }
 
 .home-features .feature {
-    background: #f7f9fb;
-    border: 1px solid #d0d4da;
+    background: var(--bg-color);
+    border: 1px var(--card-border)
     border-radius: 12px;
     padding: 16px;
     text-align: center;
@@ -482,8 +480,8 @@ main section {
 }
 
 .plan {
-    background: #fff;
-    border: 1px solid #ced6df;
+    background: var(--bg-color);
+    border: 1px solid var(--card-border);
     border-radius: 12px;
     padding: 18px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.08);
@@ -533,8 +531,6 @@ main section {
         grid-template-columns: 1fr;
     }
 }
-
-/* Gemensam sidlayout */
 body {
     font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     line-height: 1.6;
@@ -578,8 +574,8 @@ main {
 }
 
 .contact-info {
-    background: #f7f9fb;
-    border: 1px solid #dfe4ea;
+    background: var(--bg-color);
+    border: 1px solid var(--card-border);
     border-radius: 16px;
     padding: 28px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.04);
@@ -698,6 +694,26 @@ main {
 
 .dark-mode .contact-form-box button:hover {
     background-color: #1f2f40;
+}
+
+.dark-mode .plan {
+    background: #1b1b1b;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .plan h3,
+.dark-mode .plan p,
+.dark-mode .plan ul {
+    color: #e6e6e6;
+}
+
+.dark-mode .membership-cta .cta-btn {
+    background: #2f3c4f;
+    color: #fff;
+}
+
+.dark-mode .membership-cta .cta-btn:hover {
+    background: #1f2f40;
 }
 
 @media (max-width: 900px) {
