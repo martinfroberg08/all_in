@@ -44,6 +44,6 @@ if (contactForm) {
         let email = document.getElementById("email").value;
         let message = document.getElementById("message").value;
         alert(`Tack för ditt meddelande, ${name}! Vi återkommer till dig på ${email}.`);
-        form.reset();
+        contactForm.reset();
     });
 }
